@@ -1,0 +1,4 @@
+--> https://www.radishlogic.com/terraform/how-to-install-terraform-in-windows-11/
+
+--> terraform init 
+
