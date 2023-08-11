@@ -1,4 +1,14 @@
 --> https://www.radishlogic.com/terraform/how-to-install-terraform-in-windows-11/
 
---> terraform init 
+--> terraform init
+--> terraform plan
+--> terraform apply
+--> terraform state list
+--> terraform state show aws_vpc.dev_tf_vpc
+--> terraform show
+--> terraform destroy -auto-approve
+
+
+
+ 
 
