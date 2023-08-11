@@ -53,21 +53,38 @@ resource "aws_security_group" "dev_sg" {
   vpc_id      = aws_vpc.dev_tf_vpc.id
 
   ingress {
-    from_port        = 0
-    to_port          = 0
-    protocol         = "-1"
-    cidr_blocks      = [""] #TODO MUST NOT UPLOAD ON GITHUB
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = [""] #TODO MUST NOT UPLOAD ON GITHUB
   }
 
   egress {
-    from_port        = 0
-    to_port          = 0
-    protocol         = "-1"
-    cidr_blocks      = ["0.0.0.0/0"]
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
   }
 }
 
 resource "aws_key_pair" "tf_dev_auth" {
   key_name   = "dev-key"
   public_key = file("~/.ssh/tf-dev-project-key.pub")
+}
+
+resource "aws_instance" "dev_node" {
+  ami           = data.aws_ami.server_ami.id
+  instance_type = "t2.micro"
+
+  tags = {
+    Name = "dev-node"
+  }
+
+  key_name               = aws_key_pair.tf_dev_auth.key_name
+  vpc_security_group_ids = [aws_security_group.dev_sg.id]
+  subnet_id              = aws_subnet.dev_tf_public_subnet.id
+
+  root_block_device {
+    volume_size = 10
+  }
 }
