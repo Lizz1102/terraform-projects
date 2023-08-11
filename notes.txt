@@ -8,6 +8,8 @@
 --> terraform show
 --> terraform destroy -auto-approve
 --> terraform fmt 
+--> ssh-keygen -t ed25519
+  --> ls ~/.ssh
 
 
 
