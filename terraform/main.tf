@@ -56,7 +56,7 @@ resource "aws_security_group" "dev_sg" {
     from_port        = 0
     to_port          = 0
     protocol         = "-1"
-    cidr_blocks      = [""] #TODO my lappi's ipv4, MUST NOT UPLOAD ON GITHUB
+    cidr_blocks      = [""] #TODO MUST NOT UPLOAD ON GITHUB
   }
 
   egress {
@@ -65,4 +65,9 @@ resource "aws_security_group" "dev_sg" {
     protocol         = "-1"
     cidr_blocks      = ["0.0.0.0/0"]
   }
+}
+
+resource "aws_key_pair" "tf_dev_auth" {
+  key_name   = "dev-key"
+  public_key = file("~/.ssh/tf-dev-project-key.pub")
 }
