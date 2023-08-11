@@ -47,29 +47,22 @@ resource "aws_route_table_association" "public_rt_assoc" {
   route_table_id = aws_route_table.dev_public_rt.id
 }
 
-# resource "aws_security_group" "dev_sg" {
-#   name        = "allow_tls"
-#   description = "Allow TLS inbound traffic"
-#   vpc_id      = aws_vpc.main.id
+resource "aws_security_group" "dev_sg" {
+  name        = "dev-sg"
+  description = "Dev vpc security group"
+  vpc_id      = aws_vpc.dev_tf_vpc.id
 
-#   ingress {
-#     description      = "TLS from VPC"
-#     from_port        = 443
-#     to_port          = 443
-#     protocol         = "tcp"
-#     cidr_blocks      = [aws_vpc.main.cidr_block]
-#     ipv6_cidr_blocks = [aws_vpc.main.ipv6_cidr_block]
-#   }
+  ingress {
+    from_port        = 0
+    to_port          = 0
+    protocol         = "-1"
+    cidr_blocks      = [""] #TODO my lappi's ipv4, MUST NOT UPLOAD ON GITHUB
+  }
 
-#   egress {
-#     from_port        = 0
-#     to_port          = 0
-#     protocol         = "-1"
-#     cidr_blocks      = ["0.0.0.0/0"]
-#     ipv6_cidr_blocks = ["::/0"]
-#   }
-
-#   tags = {
-#     Name = "allow_tls"
-#   }
-# }
+  egress {
+    from_port        = 0
+    to_port          = 0
+    protocol         = "-1"
+    cidr_blocks      = ["0.0.0.0/0"]
+  }
+}
