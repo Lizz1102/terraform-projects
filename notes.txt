@@ -2,11 +2,13 @@
 
 --> terraform init
 --> terraform plan
---> terraform apply
+--> terraform apply -auto-approve #for automation, if we have already inspected plan 
 --> terraform state list
 --> terraform state show aws_vpc.dev_tf_vpc
 --> terraform show
 --> terraform destroy -auto-approve
+--> terraform fmt 
+
 
 
 
