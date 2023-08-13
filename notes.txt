@@ -2,7 +2,7 @@
 
 --> terraform init
 --> terraform plan
---> terraform apply -auto-approve #for automation, if we have already inspected plan 
+--> terraform apply -auto-approve # for automation, if we have already inspected plan 
 --> terraform state list
 --> terraform state show aws_vpc.dev_tf_vpc
 --> terraform show
@@ -10,6 +10,10 @@
 --> terraform fmt 
 --> ssh-keygen -t ed25519
   --> ls ~/.ssh
+
+--> ssh -i C:\Users\lizz0\.ssh\tf-dev-project-key ubuntu@54.92.202.8 
+--> exit # exit ec2 
+--> Docker version 20.10.24, build 297e128 # sudo snap  install docker
 
 
 
