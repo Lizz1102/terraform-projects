@@ -94,6 +94,6 @@ resource "aws_instance" "dev_node" {
       user         = "ubuntu",
       identityfile = "~/.ssh/tf-dev-project-key"
     })
-    interpreter = ["Powershell", "-command"] 
+    interpreter = var.host_os == "windows" ? ["Powershell", "-command"] : ["bash", "-c"] 
   }
 }
