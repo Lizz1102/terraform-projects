@@ -40,11 +40,11 @@ Add diagram #todo
    ```bash
    terraform plan
 
-   Review the plan to ensure it aligns with your expectations and run terraform apply apply them 
+4. Review the plan to ensure it aligns with your expectations and run terraform apply apply them 
    ```bash
    terraform plan
 
-4. Run terraform destroy to destroy all the resources created by Terraform
+5. Run terraform destroy to destroy all the resources created by Terraform
    ```bash
    terraform destroy
 
