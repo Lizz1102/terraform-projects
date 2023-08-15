@@ -2,7 +2,6 @@
 
 ## Overview
 
-# TODO add project architecture
 This project allows you to create a fully customizable development environment on AWS using Terraform - an IaC tool (Infrastructure as Code). It provisions a set of resources that can help developers quickly spin up and configure resources required for their development work, ensuring consistency and reproducibility across environments.
 
 ## Features
