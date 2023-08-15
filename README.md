@@ -10,6 +10,7 @@ This project allows you to create a fully customizable development environment o
 - Sets up security groups to control inbound and outbound traffic
 - Deploys EC2 instances based on the specified AMI, with customizable instance types and user data
 - Sets up IAM roles and policies for secure access to AWS services
+- Sample codes for config files, dynamic config with tf variables
 - Supports customizable tags for resource categorization
 
 ## Prerequisites
@@ -20,52 +21,39 @@ This project allows you to create a fully customizable development environment o
 - VS Code and AWS Tootlkit  
 - Basic understanding of Terraform and AWS services
 
-## Usage
+## Project Architecture
+Add diagram #todo
+
+## How to use this project and deploy using VS Code 
+
 
 1. Clone this repository to your local machine:
 
    ```bash
    git clone https://github.com/Lizz1102/terraform-aws-dev-environment.git
-Navigate to the project directory:
 
-bash
-Copy code
-cd terraform-aws-dev-environment
-Customize the terraform.tfvars file to configure your desired settings:
+2. Open a terminal in the project directory, run terraform init initialize the project and download the necessary provider plugins
+   ```bash
+   terraform init
 
-hcl
-Copy code
-aws_region = "us-east-1"
-vpc_cidr_block = "10.0.0.0/16"
-# ... (other variables)
-Initialize the Terraform project:
+3. Modify the Terraform configuration file - main.tf as needed. Run terraform plan to see a preview of the changes Terraform will make
+   ```bash
+   terraform plan
 
-bash
-Copy code
-terraform init
-Preview the changes that Terraform will apply:
+   Review the plan to ensure it aligns with your expectations and run terraform apply apply them 
+   ```bash
+   terraform plan
 
-bash
-Copy code
-terraform plan
-Apply the infrastructure changes:
+4. Run terraform destroy to destroy all the resources created by Terraform
+   ```bash
+   terraform destroy
 
-bash
-Copy code
-terraform apply
-After provisioning, Terraform will output relevant information such as instance IPs and URLs.
+## Contact
+For any questions or inquiries, you can reach out to the author of this project at lizz05110@gmail.com
 
-When done, tear down the environment:
-
-bash
-Copy code
-terraform destroy
-License
-This project is licensed under the MIT License.
-
-Contributing
-Contributions are welcome! Feel free to open an issue or pull request for any improvements or fixes.
-
-Contact
-For any questions or inquiries, you can reach out to the author of this project at lizz05110@gmail.com.
+## Acknowledgements
+Resources that helped me while building this project are -
+- https://www.linkedin.com/in/derekm1215/
+- https://www.freecodecamp.org/ 
+- https://www.terraform.io/ 
 
