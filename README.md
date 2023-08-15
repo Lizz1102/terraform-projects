@@ -2,24 +2,23 @@
 
 ## Overview
 
-This Terraform project allows you to create a fully customizable development environment on AWS. It provisions a set of resources that can help streamline your development process and ensure consistency across your team's environments. This project aims to simplify the setup of your AWS infrastructure, making it easier to focus on coding and testing.
+# TODO add project architecture
+This project allows you to create a fully customizable development environment on AWS using Terraform - an IaC tool (Infrastructure as Code). It provisions a set of resources that can help developers quickly spin up and configure resources required for their development work, ensuring consistency and reproducibility across environments.
 
 ## Features
 
-- Creates a VPC with customizable CIDR blocks, subnets, and routing configurations.
-- Sets up security groups to control inbound and outbound traffic.
-- Deploys EC2 instances based on the specified AMI, with customizable instance types and user data.
-- Configures an RDS instance for your database needs.
-- Creates an S3 bucket for storing development artifacts and backups.
-- Provides option to create an Elasticache cluster for caching requirements.
-- Sets up IAM roles and policies for secure access to AWS services.
-- Supports customizable tags for resource categorization.
+- Creates a VPC with customizable CIDR blocks, subnets, routing configurations, and IGW
+- Sets up security groups to control inbound and outbound traffic
+- Deploys EC2 instances based on the specified AMI, with customizable instance types and user data
+- Sets up IAM roles and policies for secure access to AWS services
+- Supports customizable tags for resource categorization
 
 ## Prerequisites
 
-- AWS account
-- Terraform v1.0.8 or later installed
+- AWS account with appropriate permissions
+- Terraform v1.0.8 or later installed on your local machine
 - AWS CLI configured with appropriate credentials
+- VS Code and AWS Tootlkit  
 - Basic understanding of Terraform and AWS services
 
 ## Usage
