@@ -23,6 +23,8 @@ This project allows you to create a fully customizable development environment o
 
 ## Project Architecture
 Add diagram #todo
+![Untitled Diagram drawio](https://github.com/Lizz1102/terraform-aws-dev-environment/assets/15815335/df5ccc8f-c1fc-4fde-9e43-92a260a7eca5)
+
 
 ## How to use this project and deploy using VS Code 
 
