@@ -22,10 +22,8 @@ This project allows you to create a fully customizable development environment o
 - Basic understanding of Terraform and AWS services
 
 ## Project Architecture
-Add diagram #todo
 
 ![architectural-diagram drawio](https://github.com/Lizz1102/terraform-aws-dev-environment/assets/15815335/f26d4be8-24af-4b4b-b3f9-14fde4e3aeb1) 
-
 
 ## How to use this project and deploy using VS Code 
 
