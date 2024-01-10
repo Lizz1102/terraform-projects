@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project allows us to create a fully customizable development environment on AWS using Terraform - an IaC tool (Infrastructure as Code). It provisions a set of resources that can help developers quickly spin up and configure resources required for their development work, ensuring consistency and reproducibility across environments.
+This project allows us to create a fully customizable development environment in AWS using Terraform - an IaC tool (Infrastructure as Code). It provisions a set of resources that can help developers quickly spin up and configure resources required for their development work, ensuring consistency and reproducibility across environments.
 
 ## Features
 
